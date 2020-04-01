@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Kadzidło Palo Santo",
+      "price": 3299,
+      "img": "palo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kawa Santa Domingo",
+      "price": 1199,
+      "img": "santo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Olejek z opuncji figowej",
+      "price": 999,
+      "img": "olejek opuncja.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Olejek różany",
+      "price": 1999,
+      "img": "rozany.jpg"
+    }
+  ],
+  "discount": [
+    {
+      "id": 5,
+      "name": "Olejki z receptury greckiej",
+      "price": 1999,
+      "img": "olejek z grecji.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Nalewki domowej roboty",
+      "price": 699,
+      "img": "nalewki.jpg"
+    }
+  ]
+}

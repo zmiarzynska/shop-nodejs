@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>The Shop | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="stylindex.css" />
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
+    </head>
+    <div>
+        <header class="main-header">
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-dark navbar-expand-lg ">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="mr-auto"></div>
+                        <ul class="navbar-nav" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/store">SKLEP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">O NAS</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+
+
+            <h1 class="shop-name shop-name-large">The Shop</h1>
+
+        </header>
+
+        <h1 class="shop-name">
+            <h1 class="section-header"> Hi <%= name%> </h1>
+        </h1>
+
+        <div class="gridowy">
+
+
+            <div class="first">
+
+                <section class="container content-section">
+
+                    <h2 class="section-header">PRODUKTY</h2>
+                    <div class="shop-items">
+
+                        <% items.products.forEach(function(item){  %>
+                            <div class="shop-item" data-item-id="<%= item.id %>">
+                                <span class="shop-item-title"><%= item.name %></span>
+                                <img class="shop-item-image" src="../Images/<%= item.img %>">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price">$<%= item.price/100 %></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        <%})%>
+
+                    </div>
+                </section>
+                <section class="container content-section">
+                    <h2 class="section-header">PROMOCJA</h2>
+                    <div class="shop-items">
+
+                        <% items.discount.forEach(function(item){  %>
+                            <div class="shop-item" data-item-id="<%= item.id %>">
+                                <span class="shop-item-title"><%= item.name %></span>
+                                <img class="shop-item-image" src="../Images/<%= item.img %>">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price">$<%= item.price/100 %></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        <%})%>
+
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="second">
+                <section class="container content-section">
+                    <h2 class="section-header">KOSZYK</h2>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">ARTYKUŁ</span>
+                        <span class="cart-price cart-header cart-column">CENA</span>
+                        <span class="cart-quantity cart-header cart-column">ILOŚĆ</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">SUMA</strong>
+                        <span class="cart-total-price">$0</span>
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">KUP</button>
+                </section>
+            </div>
+
+
+
+
+
+    </div >
+        <footer id="foot">
+
+            <div class="sekcjapierwsza">
+
+
+                <div class="wrapper2">
+
+                    <form action="" class="form-area" >
+                        <div class="msg-area2">
+                            <label for="msg"></label>
+                            <textarea name="" id="msg"  placeholder="Twoja wiadomosc... "></textarea>
+                        </div>
+                        <div class="details-area">
+
+                            <label for="email"></label>
+                            <input type="email" name="" id="email" placeholder="Adres e-mail">
+
+                            <button type="submit">WYŚLIJ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sekcjadruga">
+                <h2>O nas</h2>
+                <h5>Jestesmy firmą łączącą doświadczenie z pasją</h5>
+                <h7>Działamy nieprzerwanie od 1999 roku <br> </h7>
+                <h7>Wyruszamy zarówno w kierunki dzikie, nieskażone cywilizacją <br></h7>
+                <h7>Jak i doceniamy perły naszej cywilizacji</h7> <br>
+                <br><br>
+
+
+            </div>
+
+
+            <div class="sekcjaczwarta">
+                <p> <em> 2019 </em> &copy; | Stworzona przez Zuzannę Miarzyńską </p>
+            </div>
+
+
+
+        </footer>
+    </body>
+</html>

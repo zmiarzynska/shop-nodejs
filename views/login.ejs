@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>The Shop | Logowanie</title>
+    <meta name="description" content="This is the description">
+    <link rel="stylesheet" href="stylindex.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-dark navbar-expand-lg ">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav" id="menu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">STRONA GŁÓWNA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/store">SKLEP</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">O NAS</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <h1 class="shop-name shop-name-large">The Shop</h1>
+
+</header>
+
+
+
+
+
+<section class="content-section container">
+    <h2 class="section-header">Zaloguj sie zanim zaczniesz korzystac ze sklepu</h2>
+
+
+    <% if (messages.error) { %>
+     <h2 class="section-header">  <%= locals.messages.error %></h2>
+    <% }%>
+
+    <div class="wrapper">
+
+        <form action="/login" method="POST" class="form-area" >
+            <div class="details-area">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" required>
+                </div>
+
+
+                <button type="submit">ZALOGUJ</button>
+                <a href="/register">Register</a>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+<footer id="foot">
+
+    <div class="sekcjapierwsza">
+
+
+        <div class="wrapper2">
+
+            <form action="" class="form-area" >
+                <div class="msg-area2">
+                    <label for="msg"></label>
+                    <textarea name="" id="msg"  placeholder="Twoja wiadomosc... "></textarea>
+                </div>
+                <div class="details-area">
+
+                    <label for="email"></label>
+                    <input type="email" name="" id="email" placeholder="Adres e-mail">
+
+                    <button type="submit">WYŚLIJ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sekcjadruga">
+        <h2>O nas</h2>
+        <h5>Jestesmy firmą łączącą doświadczenie z pasją</h5>
+        <h7>Działamy nieprzerwanie od 1999 roku <br> </h7>
+        <h7>Wyruszamy zarówno w kierunki dzikie, nieskażone cywilizacją <br></h7>
+        <h7>Jak i doceniamy perły naszej cywilizacji</h7> <br>
+        <br><br>
+
+
+    </div>
+
+
+    <div class="sekcjaczwarta">
+        <p> <em> 2019 </em> &copy; | Stworzona przez Zuzannę Miarzyńską </p>
+    </div>
+
+
+
+</footer>
+
+</body>
+</html>
